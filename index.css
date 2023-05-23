@@ -1,0 +1,3 @@
+.gradiente {
+    -webkit-mask-image: linear-gradient(100deg, transparent, transparent, white, white, white, white);
+}
