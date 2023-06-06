@@ -13,19 +13,21 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- additional css -->
     <link rel="stylesheet" href="index.css">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-        }
-    </script>
+    <!-- additional js -->
+    <script src="index.js"></script>
 </head>
 
 <body class="m-0">
+    <button id="theme-toggle" type="button" class="m-3 w-10 h-10 absolute text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm">
+        <i class="fa-solid fa-sun fa-2xl hidden" id="theme-toggle-dark-icon"></i>
+        <i class="fa-solid fa-moon fa-2xl hidden" id="theme-toggle-light-icon"></i>
+    </button>
     <main class="min-h-[96%] bg-gradient-to-br from-zinc-50 to-zinc-200 dark:from-zinc-800 dark:to-zinc-950 grid grid-cols-12">
         <div class="col-span-12 lg:col-span-5">
             <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
                 <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                    <img class="mx-auto h-20 w-auto" src="images/logo_seta.png" alt="Logo">
+                    <img class="mx-auto h-24 w-auto block dark:hidden" src="images/wasp-black.png" alt="Logo">
+                    <img class="mx-auto h-24 w-auto hidden dark:block" src="images/wasp-light-grey.png" alt="Logo">
                     <h2 class="mt-8 text-center text-4xl font-bold leading-9 tracking-tight text-zinc-950 dark:text-zinc-200">RODRIGOOS
                     </h2>
                     <h2 class="mt-2 text-center text-lg font-bold leading-9 tracking-tight text-zinc-950 dark:text-zinc-200">Sign in to
@@ -48,7 +50,7 @@
                                 <label for="password"
                                     class="block text-sm font-medium leading-6 text-zinc-950 dark:text-zinc-200">Password</label>
                                 <div class="text-sm">
-                                    <a href="#" class="font-semibold text-yellow-700 hover:text-yellow-600">Forgot
+                                    <a href="#" class="font-semibold text-yellow-700 hover:text-yellow-600 dark:text-cyan-400 dark:hover:text-cyan-300">Forgot
                                         password?</a>
                                 </div>
                             </div>
@@ -61,7 +63,7 @@
 
                         <div>
                             <button type="submit"
-                                class="flex w-full justify-center rounded-md bg-gradient-to-br from-yellow-300 to-yellow-600 hover:bg-gradient-to-b focus:ring-4 focus:outline-none focus:ring-yellow-200 px-3 py-1.5 text-sm font-semibold leading-6 text-zinc-950 shadow-lg shadow-yellow-400/50">Sign
+                                class="flex w-full justify-center rounded-md bg-gradient-to-br from-yellow-300 to-yellow-600 dark:from-cyan-600 dark:to-cyan-900 hover:bg-gradient-to-b focus:ring-4 focus:outline-none focus:ring-yellow-200 dark:focus:ring-cyan-500 px-3 py-1.5 text-sm font-semibold leading-6 text-zinc-950 dark:text-zinc-200 shadow-lg shadow-yellow-400/50 dark:shadow-cyan-700/50">Sign
                                 in</button>
                         </div>
                     </form>
@@ -88,13 +90,13 @@
             </div>
 
         </div>
-        <div class="h-full bg-[url('./images/bg8.jpg')] bg-cover bg-center gradiente col-span-7 hidden lg:block"></div>
+        <div class="h-full bg-[url('./images/bg8.jpg')] dark:bg-[url('./images/bg-dark.jpg')] bg-cover bg-center gradiente col-span-7 hidden lg:block"></div>
     </main>
-    <footer class="min-h-[4%] bg-gradient-to-br from-yellow-300 to-yellow-600 flex items-center justify-center w-full">
-        <span class="text-md text-black">© 2023&nbsp;<a href="https://rodrigoos.me/"
+    <footer class="min-h-[4%] bg-gradient-to-br from-yellow-300 to-yellow-600 dark:from-cyan-600 dark:to-cyan-900 flex items-center justify-center w-full">
+        <span class="text-md text-black dark:text-zinc-200">© 2023&nbsp;<a href="https://rodrigoos.me/"
                 class="hover:underline">Rodrigoos</a>. All Rights Reserved.
         </span>
     </footer>
 </body>
-
+<script src="darkmode-toggle.js"></script>
 </html>
