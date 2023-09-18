@@ -25,7 +25,7 @@ $(document).ready(function () {
         label.classList.add("top-0");
         label.classList.add("left-6");
         label.classList.add("border-[1.5px]");
-        label.classList.add("border-[#08246c]");
+        label.classList.add("border-zinc-950");
     };
 
     const handleFocusOut = ({
@@ -37,7 +37,7 @@ $(document).ready(function () {
             label.classList.remove("top-0");
             label.classList.remove("left-6");
             label.classList.remove("border-[1.5px]");
-            label.classList.remove("border-[#08246c]");
+            label.classList.remove("border-zinc-950");
             label.classList.add("text-sm");
             label.classList.add("top-2/4");
             label.classList.add("left-3");
